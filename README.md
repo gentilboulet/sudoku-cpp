@@ -1,2 +1,2 @@
 # sudoku-cpp
-Toy project
+Toy project aimed at testing C++-11, 14 and more features.
