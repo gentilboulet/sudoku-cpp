@@ -1,0 +1,23 @@
+# Use new trusty images, should yield newer compilers and packages
+sudo: required
+dist: precise
+language: cpp
+
+addons:
+    apt:
+        sources:
+            - llvm-toolchain-precise
+            - ubuntu-toolchain-r-test
+            - kalakris-cmake
+        packages:
+            - clang-3.7
+            - g++-5
+            - gcc-5
+            - g++-6
+            - gcc-6
+            - cmake
+script:
+            - cmake --version
+            - mkdir build
+            - cd build
+            - cmake .. && make
