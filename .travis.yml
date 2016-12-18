@@ -8,14 +8,11 @@ addons:
         sources:
             - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
-            - kalakris-cmake
+            - george-edison55-precise-backports
         packages:
             - clang-3.7
-            - g++-5
-            - gcc-5
-            - g++-6
-            - gcc-6
             - cmake
+            - cmake-data
 script:
             - cmake --version
             - mkdir build
