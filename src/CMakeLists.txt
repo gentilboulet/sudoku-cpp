@@ -13,16 +13,5 @@ else()
         set (CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
-project(sudoku)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG")
-
-add_subdirectory (src) 
-
-add_executable(demo src/sudoku_main.cpp)
-target_link_libraries(demo sudoku)
-
-enable_testing ()
-add_subdirectory (test)
+add_library(sudoku dummy.cpp)
+target_include_directories(sudoku PUBLIC ../inc)
